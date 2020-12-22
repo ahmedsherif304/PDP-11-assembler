@@ -1,3 +1,5 @@
+#instructions = {"MOV": "0011"}
+#numberOfOperands = {"MOV": 2, "ADD": 2}
 file = open("test.txt")
 string = ""
 for line in file:
@@ -7,6 +9,12 @@ for line in file:
         string = string + line
 
 code = string.split("HLT")[0]
-variables = string.split("HLT")[1].split("DEFINE")
-print(variables)
-print(code)
+variablesString = string.split("HLT")[1].split("DEFINE")
+
+variables = {}
+for variable in variablesString:
+    if (variable != " "):
+        x, y = variable.split()
+        variables[x] = y
+print(variables)  # map of the variables
+print(code)  # code
