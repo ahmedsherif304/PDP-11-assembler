@@ -26,6 +26,14 @@ registers = {
 
 
 def decode_operand(operand):
+    '''
+    For the PC mode ==> Rn = PC = R7:
+        Immediate = Auto-increment ==> value = [PC]
+        Absolute(Indirect Immediate) = Indirect Auto-increment ==> value = [[PC]]
+        Relative = Indexed ==> value = [X+[PC]]
+        Indirect Relative = Indirect Indexed ==> value = [[X+[PC]]]
+    '''
+    
     code = ''
     mode = 'REG'
     indirect = '0'
@@ -40,9 +48,14 @@ def decode_operand(operand):
     elif operand[0] == '-' and operand[-1] == ')':          # Auto-decrement
         code = '10' + indirect + registers[operand[2:-1]]
     elif operand[0].upper() == 'X' and operand[-1] == ')':  # Indexed
-        code = '11' + indirect + registers[operand[2: -1]]
-    elif operand[0] == '#'
-
+        code = '11' + indirect + registers[operand[2: -1]] 
+    elif operand[0] == '#':                                 # Immediate
+        code = '01' + indirect + '111'
+        mode = 'PC'
+    else:                                                   # Relative                                                    
+        code = '11' + indirect + '111'
+        mode = 'PC'
+        
     return code, mode
 
 
