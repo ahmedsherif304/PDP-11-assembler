@@ -13,7 +13,39 @@ instructions = {"MOV": {'code': '0011', 'operands': '2'}, "ADD": {'code': '0100'
                 "HLT": {'code': '000', 'operands': '0'}, "NOP": {'code': '001', 'operands': '-1'}, "RESET": {'code': '010', 'operands': '0'},
                 "RTS": {'code': '011', 'operands': '0'}, "IRET": {'code': '100', 'operands': ' 0'}
                 }
-#numberOfOperands = {"MOV": 2, "ADD": 2}
+registers = {
+    "R0": "000",
+    "R1": "001",
+    "R2": "010",
+    "R3": "011",
+    "R4": "100",
+    "R5": "101",
+    "R6": "110",
+    "R7": "111"
+}
+
+
+def decode_operand(operand):
+    code = ''
+    mode = 'REG'
+    indirect = '0'
+    if operand[0] == '@':
+        operand = operand[1:]
+        indirect = '1'
+    
+    if operand in registers.keys():                         # Register
+        code = '00' + indirect + registers[operand]
+    elif operand[0] == '(' and operand[-1] == '+':          # Auto-increment
+        code = '01' + indirect + registers[operand[1:-2]]
+    elif operand[0] == '-' and operand[-1] == ')':          # Auto-decrement
+        code = '10' + indirect + registers[operand[2:-1]]
+    elif operand[0].upper() == 'X' and operand[-1] == ')':  # Indexed
+        code = '11' + indirect + registers[operand[2: -1]]
+    elif operand[0] == '#'
+
+    return code, mode
+
+
 file = open("test.txt")
 string = ""
 for line in file:
@@ -39,6 +71,7 @@ print(code)
 i = 0
 labels = {}
 line = 1
+program = []
 while i < len(code):
     word = code[i]
     if not (word in instructions):
