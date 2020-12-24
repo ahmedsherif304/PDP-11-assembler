@@ -10,7 +10,7 @@ instructions = {"MOV": {'code': '0011', 'operands': '2'}, "ADD": {'code': '0100'
                 "BR": {'code': '0011', 'operands':  'b'}, "BEQ": {'code': '0100', 'operands': 'b'}, "BNE": {'code': '0101', 'operands': 'b'},
                 "BLO": {'code': '0110', 'operands': 'b'}, "BLS": {'code': '0111', 'operands': 'b'}, "BHI": {'code': '1000', 'operands': 'b'},
                 "BHS": {'code': '1001', 'operands': 'b'},
-                "HLT": {'code': '000', 'operands': '0'}, "NOP": {'code': '001', 'operands': '-1'}, "RESET": {'code': '010', 'operands': '0'},
+                "HLT": {'code': '000', 'operands': '0'}, "NOP": {'code': '001', 'operands': '0'}, "RESET": {'code': '010', 'operands': '0'},
                 "RTS": {'code': '011', 'operands': '0'}, "IRET": {'code': '100', 'operands': ' 0'}
                 }
 registers = {
@@ -40,7 +40,7 @@ def decode_operand(operand):
     if operand[0] == '@':
         operand = operand[1:]
         indirect = '1'
-    
+
     if operand in registers.keys():                         # Register
         code = '00' + indirect + registers[operand]
     elif operand[0] == '(' and operand[-1] == '+':          # Auto-increment
@@ -48,24 +48,61 @@ def decode_operand(operand):
     elif operand[0] == '-' and operand[-1] == ')':          # Auto-decrement
         code = '10' + indirect + registers[operand[2:-1]]
     elif operand[0].upper() == 'X' and operand[-1] == ')':  # Indexed
-        code = '11' + indirect + registers[operand[2: -1]] 
+        code = '11' + indirect + registers[operand[2: -1]]
     elif operand[0] == '#':                                 # Immediate
         code = '01' + indirect + '111'
-        mode = 'PC'
-    else:                                                   # Relative                                                    
+        mode = 'PC_M'
+    else:                                                   # Relative
         code = '11' + indirect + '111'
-        mode = 'PC'
-        
+        mode = 'PC_R'
+
     return code, mode
+
+
+def encode_decimal(operand):
+    if operand in variables.keys():
+        operand = variables[operand]
+
+    code = ''
+    operand = int(operand)
+    if operand < 0:
+        code = bin(operand % (1 << 16))[2:]
+    else:
+        code = '0'*(16-len(bin(operand)[2:])) + bin(operand)[2:]
+
+    return code
+
+
+def decode_immediate(operand):
+    if operand[0] == '@':
+        operand = operand[2:]
+    else:
+        operand = operand[1:]
+
+    return encode_decimal(operand)
+
+
+def decode_relative(operand):
+    if operand[0] == '@':
+        operand = operand[1:]
+
+    return encode_decimal(operand)
 
 
 file = open("test.txt")
 string = ""
+lines = []
 for line in file:
     # split the line and get what is before the ; symbol and then make all the charchters  upper cases
     line = line.split(';')[0].upper()
     if line != "\n":
         string = string + line
+    if line != '\n' and len(line) != 0:
+        lines.append(line.upper())
+
+lines = [line for line in lines if not line.startswith('DEFINE')]
+for line in lines:
+    print(line)
 
 code = string.split("HLT")[0]
 variablesString = string.split("HLT")[1].split("DEFINE")
@@ -76,47 +113,87 @@ for variable in variablesString:
         x, y = variable.split()
         variables[x] = y
 code = code.replace(',', ' ')
-print(variables)  # map of the variables
-print(code)  # code'
-ouput = open("ouput.txt", 'w')
+# print(code)
+# print(variables)  # map of the variables
+# print(code)  # code'
 code = code.split()
-print(code)
-i = 0
+# print(code)
+
+i = 1
 labels = {}
-line = 1
-program = []
-while i < len(code):
-    word = code[i]
-    if not (word in instructions):
+for i in range(len(lines)):
+    word = lines[i].strip().replace(',', ' ').split()
+    if word[0] not in instructions and word[0][-1] == ':':
         # label
         # putting the number of the line this label in
-        labels[word] = line
-        i = i + 1
-        continue
+        print(word[0][:-1])
+        labels[word[0][:-1]] = i
 
-    if instructions[word]['operands'] == '-1':
+
+# line = 1
+program = []
+for line in lines:
+    word = line.strip().replace(',', ' ').split()
+
+    if word[0] not in instructions and word[0][-1] == ':':
+        if len(word) > 1:
+            word = word[1:]
+        else:
+            continue
+
+    # Q: Why -1 ?
+    if instructions[word[0]]['operands'] == '0':
         # NoOp
         i = i + 1
-        line = line + 1
+        program.append(
+            '0010' + instructions[word[0]]['code'] + ''.join(['0'*9]))
         continue
 
     # add both the operand to the file according to the operand
-    if instructions[word]['operands'] == '2':
-        opcode = instructions[word]['code']
-        ouput.write(instructions[word]['code'])
-        # add the 2 operands
-        i = i + 2
-    elif instructions[word]['operands'] == '1':
-        # add the operand
-        ouput.write('0000'+instructions[word]['code'])
-        i = i + 1
-    elif instructions[word]['operands'] == 'b':
-        # add the offset
-        ouput.write('0001'+instructions[word]['code'])
-        i = i + 1
-    elif instructions[word]['operands'] == '0':
-        ouput.write('0010', instructions[word]['code'])
-    # for debugging purpose
-    ouput.write('\n')
-    i = i + 1
-    line = line + 1
+    if instructions[word[0]]['operands'] == '2':
+        opcode = instructions[word[0]]['code']
+        src, src_mode = decode_operand(word[1])
+        dst, dst_mode = decode_operand(word[2])
+        code = opcode + src + dst
+        program.append(code)
+
+        # Handle immediate and relative modes for the src
+        if src_mode == 'PC_M':
+            value = decode_immediate(word[1])
+            program.append(value)
+        elif src_mode == 'PC_R':
+            value = decode_relative(word[1])
+            program.append(value)
+        # Handle immediate and relative modes for the dst
+        if dst_mode == 'PC_M':
+            value = decode_immediate(word[2])
+            program.append(value)
+        elif dst_mode == 'PC_R':
+            value = decode_relative(word[2])
+            program.append(value)
+    elif instructions[word[0]]['operands'] == '1':
+        opcode = instructions[word[0]]['code']
+        dst, dst_mode = decode_operand(word[1])
+        # 4-bits FLAG + 4-bits OPCODE + 2-bits DONT CARE + 6-bits DST
+        code = '0000' + opcode + '00' + dst
+        program.append(code)
+        # Handle immediate and relative modes for the dst
+        if dst_mode == 'PC_M':
+            value = decode_immediate(word[1])
+            program.append(value)
+        elif dst_mode == 'PC_R':
+            value = decode_relative(word[1])
+            program.append(value)
+    elif instructions[word[0]]['operands'] == 'b':
+        opcode = instructions[word[0]]['code']
+        offset = bin(labels[word[1]])[2:]
+        offset = '0'*(8-len(offset)) + offset
+        code = '0001' + opcode + offset
+        program.append(code)
+    # i = i + 1
+
+output = open("program.txt", "w")
+for inst in program:
+    print(inst)
+    output.write(inst+'\n')
+output.close()
