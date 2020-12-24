@@ -33,7 +33,7 @@ def decode_operand(operand):
         Relative = Indexed ==> value = [X+[PC]]
         Indirect Relative = Indirect Indexed ==> value = [[X+[PC]]]
     '''
-    
+
     code = ''
     mode = 'REG'
     indirect = '0'
@@ -102,6 +102,7 @@ while i < len(code):
 
     # add both the operand to the file according to the operand
     if instructions[word]['operands'] == '2':
+        opcode = instructions[word]['code']
         ouput.write(instructions[word]['code'])
         # add the 2 operands
         i = i + 2
