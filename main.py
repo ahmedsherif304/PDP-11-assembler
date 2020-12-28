@@ -23,6 +23,7 @@ registers = {
     "R6": "110",
     "R7": "111"
 }
+variables = {}
 
 
 def decode_operand(operand):
@@ -47,8 +48,10 @@ def decode_operand(operand):
         code = '01' + indirect + registers[operand[1:-2]]
     elif operand[0] == '-' and operand[-1] == ')':          # Auto-decrement
         code = '10' + indirect + registers[operand[2:-1]]
-    elif operand[0].upper() == 'X' and operand[-1] == ')':  # Indexed
-        code = '11' + indirect + registers[operand[2: -1]]
+    elif operand[-1] == ')':  # Indexed
+        var_idx = operand.find('(')
+        # var = operand[0:var_idx]
+        code = '11' + indirect + registers[operand[var_idx+1: -1]]
     elif operand[0] == '#':                                 # Immediate
         code = '01' + indirect + '111'
         mode = 'PC_M'
@@ -92,6 +95,7 @@ def decode_relative(operand):
 file = open("test.txt")
 string = ""
 lines = []
+i = 0
 for line in file:
     # split the line and get what is before the ; symbol and then make all the charchters  upper cases
     line = line.split(';')[0].upper()
@@ -100,40 +104,51 @@ for line in file:
     if line != '\n' and len(line) != 0:
         lines.append(line.upper())
 
-lines = [line for line in lines if not line.startswith('DEFINE')]
-for line in lines:
-    print(line)
-
-code = string.split("HLT")[0]
-variablesString = string.split("HLT")[1].split("DEFINE")
-
-variables = {}
-for variable in variablesString:
-    if variable.strip():
-        x, y = variable.split()
-        variables[x] = y
-code = code.replace(',', ' ')
-# print(code)
-# print(variables)  # map of the variables
-# print(code)  # code'
-code = code.split()
-# print(code)
-
-i = 1
+address = 0
 labels = {}
-for i in range(len(lines)):
-    word = lines[i].strip().replace(',', ' ').split()
-    if word[0] not in instructions and word[0][-1] == ':':
-        # label
-        # putting the number of the line this label in
-        print(word[0][:-1])
-        labels[word[0][:-1]] = i
-
-
-# line = 1
-program = []
+line_address = []
 for line in lines:
+    line_address.append(address)
     word = line.strip().replace(',', ' ').split()
+    if line.startswith('DEFINE'):
+        word = line.split(' ')
+        variables[word[1]] = {'ADDRESS': address, 'VALUE': word[2]}
+        address += 1
+        continue
+
+    if word[0] not in instructions and word[0][-1] == ':':
+        labels[word[0][:-1]] = address
+        if len(word) > 1:
+            word = word[1:]
+        else:
+            continue
+    if instructions[word[0]]['operands'] == '0':
+        address += 1
+        continue
+
+    if instructions[word[0]]['operands'] == '2':
+        address += 1
+        _, src_mode = decode_operand(word[1])
+        _, dst_mode = decode_operand(word[2])
+        if src_mode == 'PC_M' or src_mode == 'PC_R':
+            address += 1
+        if dst_mode == 'PC_M' or dst_mode == 'PC_R':
+            address += 1
+    elif instructions[word[0]]['operands'] == '1':
+        address += 1
+        _, dst_mode = decode_operand(word[1])
+        if dst_mode == 'PC_M' or dst_mode == 'PC_R':
+            address += 1
+    elif instructions[word[0]]['operands'] == 'b':
+        address += 1
+
+program = []
+for i, line in enumerate(lines):
+    word = line.strip().replace(',', ' ').split()
+    if line.startswith('DEFINE'):
+        word = line.split(' ')
+        program.append(decode_relative(word[2]))
+        continue
 
     if word[0] not in instructions and word[0][-1] == ':':
         if len(word) > 1:
@@ -141,10 +156,9 @@ for line in lines:
         else:
             continue
 
-    # Q: Why -1 ?
     if instructions[word[0]]['operands'] == '0':
         # NoOp
-        i = i + 1
+        # i = i + 1
         program.append(
             '0010' + instructions[word[0]]['code'] + ''.join(['0'*9]))
         continue
@@ -162,14 +176,14 @@ for line in lines:
             value = decode_immediate(word[1])
             program.append(value)
         elif src_mode == 'PC_R':
-            value = decode_relative(word[1])
+            value = decode_relative(str(variables[word[1]]['ADDRESS']))
             program.append(value)
         # Handle immediate and relative modes for the dst
         if dst_mode == 'PC_M':
             value = decode_immediate(word[2])
             program.append(value)
         elif dst_mode == 'PC_R':
-            value = decode_relative(word[2])
+            value = decode_relative(str(variables[word[2]]['ADDRESS']))
             program.append(value)
     elif instructions[word[0]]['operands'] == '1':
         opcode = instructions[word[0]]['code']
@@ -182,18 +196,21 @@ for line in lines:
             value = decode_immediate(word[1])
             program.append(value)
         elif dst_mode == 'PC_R':
-            value = decode_relative(word[1])
+            value = decode_relative(str(variables[word[1]]['ADDRESS']))
             program.append(value)
     elif instructions[word[0]]['operands'] == 'b':
         opcode = instructions[word[0]]['code']
-        offset = bin(labels[word[1]])[2:]
-        offset = '0'*(8-len(offset)) + offset
+        offset = labels[word[1]]
+        offset = line_address[i] - int(offset)
+        if offset < 0:
+            offset = bin(offset % (1 << 8))[2:]
+        else:
+            offset = '0'*(8-len(bin(offset)[2:])) + bin(offset)[2:]
         code = '0001' + opcode + offset
         program.append(code)
-    # i = i + 1
 
 output = open("program.txt", "w")
 for inst in program:
-    print(inst)
     output.write(inst+'\n')
 output.close()
+print(program)
