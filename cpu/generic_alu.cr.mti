@@ -14,14 +14,6 @@ Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 
 -- Compiling entity my_adder
 -- Compiling architecture a_my_adder of my_adder
 
-} {} {}} {D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/alsu.vhd} {1 {vcom -work work -2002 -explicit -stats=none {D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/alsu.vhd}
-Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity ALSU
--- Compiling architecture arch_ALSU of ALSU
-
 } {} {}} {D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/partB.vhd} {1 {vcom -work work -2002 -explicit -stats=none {D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/partB.vhd}
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
 -- Loading package STANDARD
