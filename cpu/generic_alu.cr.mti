@@ -6,13 +6,13 @@ Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 
 -- Compiling entity partA
 -- Compiling architecture arch_partA of partA
 
-} {} {}} {D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/partB.vhd} {1 {vcom -work work -2002 -explicit -stats=none {D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/partB.vhd}
+} {} {}} {D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/one_adder.vhd} {1 {vcom -work work -2002 -explicit -stats=none {D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/one_adder.vhd}
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity partB
--- Compiling architecture arch_partB of partB
+-- Compiling entity my_adder
+-- Compiling architecture a_my_adder of my_adder
 
 } {} {}} {D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/alsu.vhd} {1 {vcom -work work -2002 -explicit -stats=none {D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/alsu.vhd}
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
@@ -22,21 +22,13 @@ Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 
 -- Compiling entity ALSU
 -- Compiling architecture arch_ALSU of ALSU
 
-} {} {}} {D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/one_adder.vhd} {1 {vcom -work work -2002 -explicit -stats=none {D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/one_adder.vhd}
+} {} {}} {D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/partB.vhd} {1 {vcom -work work -2002 -explicit -stats=none {D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/partB.vhd}
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity my_adder
--- Compiling architecture a_my_adder of my_adder
-
-} {} {}} {D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/partC.vhd} {1 {vcom -work work -2002 -explicit -stats=none {D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/partC.vhd}
-Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity partC
--- Compiling architecture arch_partC of partC
+-- Compiling entity partB
+-- Compiling architecture arch_partB of partB
 
 } {} {}} {D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/ALU.vhd} {1 {vcom -work work -2002 -explicit -stats=none {D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/ALU.vhd}
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
@@ -46,13 +38,13 @@ Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 
 -- Compiling entity ALU
 -- Compiling architecture arch_ALU of ALU
 
-} {} {}} {D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/partD.vhd} {1 {vcom -work work -2002 -explicit -stats=none {D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/partD.vhd}
+} {} {}} {D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/partC.vhd} {1 {vcom -work work -2002 -explicit -stats=none {D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/partC.vhd}
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity partD
--- Compiling architecture arch_partD of partD
+-- Compiling entity partC
+-- Compiling architecture arch_partC of partC
 
 } {} {}} {D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/fulladder.vhd} {1 {vcom -work work -2002 -explicit -stats=none {D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/fulladder.vhd}
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
@@ -61,5 +53,13 @@ Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 
 -- Loading package std_logic_1164
 -- Compiling entity my_nadder
 -- Compiling architecture a_my_nadder of my_nadder
+
+} {} {}} {D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/partD.vhd} {1 {vcom -work work -2002 -explicit -stats=none {D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/partD.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity partD
+-- Compiling architecture arch_partD of partD
 
 } {} {}}
