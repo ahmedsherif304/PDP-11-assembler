@@ -13,7 +13,7 @@ architecture ROM_Arc of ROM is
 	type ROM_type is array(0 to 512) of std_logic_vector(31 downto 0);
 
 	signal rom : ROM_type := (
-0   	=>  	"00000000100101101000100011100000",
+0   	=>  	"00000000100101101000101011100000",
 1   	=>  	"00000001001100100000000000010000",
 2   	=>  	"00000000001001000000000000000001",
 3   	=>  	"00000100000000000000000000000000",
@@ -80,7 +80,7 @@ others => "00000000000000000000000000000000"
 	begin
 		process(clk) is
 		  Begin
-			if falling_edge(clk) then  
+			if rising_edge(clk) then  
 				CW <= rom(to_integer(unsigned(uAR)));
 			end if;
 		end process;
