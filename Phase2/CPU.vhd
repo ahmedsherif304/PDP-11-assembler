@@ -134,7 +134,7 @@ SRC_r:nreg generic map(16) port map(internal_CLK,RST,SRCin,data_bus,SRC);
 DST_r:nreg generic map(16) port map(internal_CLK,RST,DSTin,data_bus,DST);	
 
 	-- 2 ram Registers --
-MDR_E <= MDRin or (not WMFC);
+MDR_E <= MDRin; --or (not WMFC);
 MDR_input <= mem_data when WMFC='0'
 	else data_bus;	
 MDR_r:nreg generic map(16) port map(internal_CLK,RST,MDR_E,MDR_input,MDR);	
@@ -177,7 +177,7 @@ Z_t:tristate generic map(16) port map(Zout,Z,data_bus);	-- Z
 
 	-- Addressout tri state buffer --
 IR_Address<=IR and "0001111111111111";
-addressOut <= '1' when IR(15 downto 12) = "0000"
+addressOut <= '1' when IR(15 downto 12) = "0001"
 	else '0';
 IR_t:tristate generic map(16) port map(addressOut,IR_Address,data_bus);	-- Z
 

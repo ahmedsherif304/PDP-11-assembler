@@ -134,7 +134,7 @@ SRC_r:nreg generic map(16) port map(internal_CLK,RST,SRCin,data_bus,SRC);
 DST_r:nreg generic map(16) port map(internal_CLK,RST,DSTin,data_bus,DST);	
 
 	-- 2 ram Registers --
-MDR_E <= MDRin or (not WMFC);
+MDR_E <= MDRin; --or (not WMFC);
 MDR_input <= mem_data when WMFC='0'
 	else data_bus;	
 MDR_r:nreg generic map(16) port map(internal_CLK,RST,MDR_E,MDR_input,MDR);	
