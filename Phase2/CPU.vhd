@@ -119,7 +119,6 @@ signal WMFC : std_logic;
 ---------------------------------------------------------------------------
 begin
 internal_CLK<= CLK ;
-	-- 4 general purpose registers --
 R0_r: nreg generic map(16) port map(internal_CLK,RST,R0in,data_bus,R0);	
 R1_r: nreg generic map(16) port map(internal_CLK,RST,R1in,data_bus,R1);	
 --SPin_EN<=R2in or SPin;
