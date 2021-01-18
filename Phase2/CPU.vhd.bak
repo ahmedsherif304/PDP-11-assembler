@@ -119,7 +119,6 @@ signal WMFC : std_logic;
 ---------------------------------------------------------------------------
 begin
 internal_CLK<= CLK ;
-	-- 4 general purpose registers --
 R0_r: nreg generic map(16) port map(internal_CLK,RST,R0in,data_bus,R0);	
 R1_r: nreg generic map(16) port map(internal_CLK,RST,R1in,data_bus,R1);	
 --SPin_EN<=R2in or SPin;
@@ -189,12 +188,12 @@ IR_t:tristate generic map(16) port map(addressOut,IR_Address,data_bus);	-- Z
 Ram_comp: ram port map(internal_CLK,Wr_ite,MAR,MDR,mem_data);
 
 	-- ALSU component --
-ALSU_comp: ALSU port map(Carryin,data_bus,Y,ALU,Z,Cout,Zero,Negative);
+ALSU_comp: ALSU port map(Carryin,data_bus,Y,ALU,ALU_out,Cout,Zero,Negative);
 ALSU_Flags(0) <= Cout;
 ALSU_Flags(1) <= Zero;
 ALSU_Flags(2) <= Negative;	
 	
 	-- CU component -- to do check index of flags
-CU_comp: CU port map(internal_CLK,RST,IR,FLAGS(1),Flags(2),Flags(3),PCout,MDRout,Zout,SrcOut,DstOut,PCin,IRin,Zin,MARin,MDRin,Yin,SRCin,DSTin,ALU,RE_AD,Wr_ite,ClearY,Carryin,WMFC,R0in,R0out,R1in,R1out,R2in,R2out,R3in,R3out,R4in,R4out,R5in,R5out,R6in,R6out);
+CU_comp: CU port map(internal_CLK,RST,IR,Cout,Negative,Zero,PCout,MDRout,Zout,SrcOut,DstOut,PCin,IRin,Zin,MARin,MDRin,Yin,SRCin,DSTin,ALU,RE_AD,Wr_ite,ClearY,Carryin,WMFC,R0in,R0out,R1in,R1out,R2in,R2out,R3in,R3out,R4in,R4out,R5in,R5out,R6in,R6out);
 
 end CPU_Arc;

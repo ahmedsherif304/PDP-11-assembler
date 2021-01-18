@@ -21,9 +21,9 @@ V6N`oz>9lWVk10WIQffbOW2
 !s100 hd@[RWLh]4NMWkZFUa13l3
 Z6 OP;C;10.4a;61
 32
-Z7 !s110 1610995927
+Z7 !s110 1611004499
 !i10b 1
-Z8 !s108 1610995927.000000
+Z8 !s108 1611004499.000000
 Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/alsu.vhd|
 Z10 !s107 D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/alsu.vhd|
 !i113 1
@@ -39,7 +39,7 @@ VlcmMR<I_QfVCR@]_k1O4H2
 !s100 1MQ<43f8?;<_=h;D<_@>n2
 R6
 32
-R7
+Z13 !s110 1611004500
 !i10b 1
 R8
 R9
@@ -48,23 +48,23 @@ R10
 R11
 R12
 Ealu
-Z13 w1604254142
+Z14 w1604254142
 R1
 R2
 R3
-Z14 8D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/ALU.vhd
-Z15 FD:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/ALU.vhd
+Z15 8D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/ALU.vhd
+Z16 FD:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/ALU.vhd
 l0
 L5
 VKdIYFULi]hffOzeN>DI9P3
 !s100 jj0nDQ`ffMO7=61RAd9TL3
 R6
 32
-Z16 !s110 1610995926
+Z17 !s110 1611004498
 !i10b 1
-Z17 !s108 1610995925.000000
-Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/ALU.vhd|
-Z19 !s107 D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/ALU.vhd|
+Z18 !s108 1611004498.000000
+Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/ALU.vhd|
+Z20 !s107 D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/ALU.vhd|
 !i113 1
 R11
 R12
@@ -78,30 +78,30 @@ V53nH]m5kI37C8LWAhY>Ba3
 !s100 ZEK9lFg4ElO=V<20C18JP0
 R6
 32
-R16
-!i10b 1
 R17
+!i10b 1
 R18
 R19
+R20
 !i113 1
 R11
 R12
 Ebitoring
-Z20 w1610998488
+Z21 w1611004495
 R1
 R2
 R3
-Z21 8D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/BITORING.vhd
-Z22 FD:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/BITORING.vhd
+Z22 8D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/BITORING.vhd
+Z23 FD:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/BITORING.vhd
 l0
 L5
 VnB6EEN?DA31i>Z7bn@8<C1
 !s100 :S1AHWJWz1[9<ChCFagBR0
 R6
 32
-Z23 !s110 1611001011
+R13
 !i10b 1
-Z24 !s108 1611001011.000000
+Z24 !s108 1611004500.000000
 Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/BITORING.vhd|
 Z26 !s107 D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/BITORING.vhd|
 !i113 1
@@ -110,14 +110,14 @@ R12
 Aor_arc
 R1
 R2
-Z27 DEx4 work 8 bitoring 0 22 nB6EEN?DA31i>Z7bn@8<C1
+DEx4 work 8 bitoring 0 22 nB6EEN?DA31i>Z7bn@8<C1
 l15
 L13
-Z28 VDX:2`CSX8>C2hSfMhR<bF1
-Z29 !s100 HSPTNMdV[eT68oD3Y2oD32
+V^6e1T4aLL;JJX@3mbCKoJ1
+!s100 a0`_mK;OaT:H9SX:BRn?[0
 R6
 32
-R23
+R13
 !i10b 1
 R24
 R25
@@ -126,23 +126,23 @@ R26
 R11
 R12
 Ecpu
-Z30 w1610995300
+Z27 w1611004336
 R1
 R2
 R3
-Z31 8D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/CPU.vhd
-Z32 FD:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/CPU.vhd
+Z28 8D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/CPU.vhd
+Z29 FD:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/CPU.vhd
 l0
 L4
 Vd28geJ1W?@f47HRhS]]kf1
 !s100 W;i>cC[K>8kF6RgH]Hd[N2
 R6
 32
-Z33 !s110 1610995928
+R13
 !i10b 1
-Z34 !s108 1610995928.000000
-Z35 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/CPU.vhd|
-Z36 !s107 D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/CPU.vhd|
+R24
+Z30 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/CPU.vhd|
+Z31 !s107 D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/CPU.vhd|
 !i113 1
 R11
 R12
@@ -152,36 +152,36 @@ R2
 DEx4 work 3 cpu 0 22 d28geJ1W?@f47HRhS]]kf1
 l120
 L8
-VZnBRZNG:nXEW8C9kg:O6j3
-!s100 Tm:mKAj`2^Ql?G@Nl:<C90
+Vc5QEn7DdP9[V0@Ue5^U7c3
+!s100 GCFnPffCh?i4gz5L82bA[1
 R6
 32
-R33
+R13
 !i10b 1
-R34
-R35
-R36
+R24
+R30
+R31
 !i113 1
 R11
 R12
 Ecu
-R30
+R27
 R1
 R2
 R3
-Z37 8D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/CONTROL_UNIT.vhd
-Z38 FD:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/CONTROL_UNIT.vhd
+Z32 8D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/CONTROL_UNIT.vhd
+Z33 FD:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/CONTROL_UNIT.vhd
 l0
 L4
 V2:88KjSPTRCO7:`7`fzE<0
 !s100 :;JTMDen<?lZ>eE8mciEZ0
 R6
 32
-R33
+R13
 !i10b 1
-R34
-Z39 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/CONTROL_UNIT.vhd|
-Z40 !s107 D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/CONTROL_UNIT.vhd|
+R24
+Z34 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/CONTROL_UNIT.vhd|
+Z35 !s107 D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/CONTROL_UNIT.vhd|
 !i113 1
 R11
 R12
@@ -195,38 +195,38 @@ VS`dcSoN7ZkB0XU27G9ajl3
 !s100 JhPR0bi0d;Da]d@aL@?IV3
 R6
 32
-R33
+R13
 !i10b 1
+R24
 R34
-R39
-R40
+R35
 !i113 1
 R11
 R12
 Edec
-Z41 w1610989379
-Z42 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z36 w1610989379
+Z37 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 R1
 R2
 R3
-Z43 8D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/dec.vhd
-Z44 FD:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/dec.vhd
+Z38 8D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/dec.vhd
+Z39 FD:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/dec.vhd
 l0
 L5
 V[zF>UU:DQhQbS9d_V8oCS3
 !s100 RN]eV3UD4PL^8>ZOkZjBB0
 R6
 32
-R33
+R13
 !i10b 1
-R34
-Z45 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/dec.vhd|
-Z46 !s107 D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/dec.vhd|
+R24
+Z40 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/dec.vhd|
+Z41 !s107 D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/dec.vhd|
 !i113 1
 R11
 R12
 Aarch
-R42
+R37
 R1
 R2
 DEx4 work 3 dec 0 22 [zF>UU:DQhQbS9d_V8oCS3
@@ -236,32 +236,32 @@ V7N4z1Sde_0mA_zDkWYn1`1
 !s100 ZV_RcBeF]T8Hcb6G]BV^o2
 R6
 32
-R33
+R13
 !i10b 1
-R34
-R45
-R46
+R24
+R40
+R41
 !i113 1
 R11
 R12
 Edecoding_circuit
-Z47 w1610927829
+Z42 w1610927829
 R1
 R2
 R3
-Z48 8D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/DECODING_CIRCUIT.vhd
-Z49 FD:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/DECODING_CIRCUIT.vhd
+Z43 8D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/DECODING_CIRCUIT.vhd
+Z44 FD:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/DECODING_CIRCUIT.vhd
 l0
 L3
 VHY0f:c^UCW6JbBaPXH]CN3
 !s100 `<[;^4LEaW6VX0LO16]M63
 R6
 32
-Z50 !s110 1610997292
+Z45 !s110 1611004501
 !i10b 1
-Z51 !s108 1610997291.000000
-Z52 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/DECODING_CIRCUIT.vhd|
-Z53 !s107 D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/DECODING_CIRCUIT.vhd|
+Z46 !s108 1611004501.000000
+Z47 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/DECODING_CIRCUIT.vhd|
+Z48 !s107 D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/DECODING_CIRCUIT.vhd|
 !i113 1
 R11
 R12
@@ -275,32 +275,32 @@ VImcTJMO4gZb^4>Wm3Mc2N1
 !s100 <]OOAPRDanhg1cjYUdOA<3
 R6
 32
-R50
+R45
 !i10b 1
-R51
-R52
-R53
+R46
+R47
+R48
 !i113 1
 R11
 R12
 Emy_adder
-Z54 w1604153381
+Z49 w1604153381
 R1
 R2
 R3
-Z55 8D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/one_adder.vhd
-Z56 FD:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/one_adder.vhd
+Z50 8D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/one_adder.vhd
+Z51 FD:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/one_adder.vhd
 l0
 L4
 VDb?WJKS>C9M8DmOWf>bL30
 !s100 V[TcSO_6=i7G`Z4N4obU^0
 R6
 32
-R16
+R17
 !i10b 1
-Z57 !s108 1610995926.000000
-Z58 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/one_adder.vhd|
-Z59 !s107 D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/one_adder.vhd|
+R18
+Z52 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/one_adder.vhd|
+Z53 !s107 D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/one_adder.vhd|
 !i113 1
 R11
 R12
@@ -314,11 +314,11 @@ VF1I4A_9N`67AA31RL[z732
 !s100 fDkif0Qj2F?nXhRB1Dk7]1
 R6
 32
-R16
+R17
 !i10b 1
-R57
-R58
-R59
+R18
+R52
+R53
 !i113 1
 R11
 R12
@@ -327,19 +327,19 @@ R0
 R1
 R2
 R3
-Z60 8D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/fulladder.vhd
-Z61 FD:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/fulladder.vhd
+Z54 8D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/fulladder.vhd
+Z55 FD:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/fulladder.vhd
 l0
 L4
 V1;N]jS=hGAA[ImX]f_BB<3
 !s100 2hh?dE?an@`kKjC3^EaB_2
 R6
 32
-Z62 !s110 1610995929
+R45
 !i10b 1
-Z63 !s108 1610995929.000000
-Z64 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/fulladder.vhd|
-Z65 !s107 D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/fulladder.vhd|
+R46
+Z56 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/fulladder.vhd|
+Z57 !s107 D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/fulladder.vhd|
 !i113 1
 R11
 R12
@@ -353,71 +353,71 @@ VEOFzWIV87VRnPi8^zF5CU3
 !s100 L9FI>1[Sn7]0<YCM2[0hI3
 R6
 32
-R62
+R45
 !i10b 1
-R63
-R64
-R65
+R46
+R56
+R57
 !i113 1
 R11
 R12
 Enreg
-R41
+R36
 R1
 R2
 R3
-Z66 8D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/nreg.vhd
-Z67 FD:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/nreg.vhd
+Z58 8D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/nreg.vhd
+Z59 FD:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/nreg.vhd
 l0
 L4
 VZbG=hTW^Mj4gekITCHghK3
 !s100 FiGn;=dL][?X>iUWfNNUK0
 R6
 32
-R62
+R45
 !i10b 1
-R63
-Z68 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/nreg.vhd|
-Z69 !s107 D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/nreg.vhd|
+R46
+Z60 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/nreg.vhd|
+Z61 !s107 D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/nreg.vhd|
 !i113 1
 R11
 R12
 Aarch
 R1
 R2
-DEx4 work 4 nreg 0 22 ZbG=hTW^Mj4gekITCHghK3
+Z62 DEx4 work 4 nreg 0 22 ZbG=hTW^Mj4gekITCHghK3
 l14
 L13
-Vj7CPfAlQa1^k?P?9Mg5o71
-!s100 T>^WH?nlSH;^T]k]anlPA2
+Z63 Vj7CPfAlQa1^k?P?9Mg5o71
+Z64 !s100 T>^WH?nlSH;^T]k]anlPA2
 R6
 32
-R62
+R45
 !i10b 1
-R63
-R68
-R69
+R46
+R60
+R61
 !i113 1
 R11
 R12
 Eparta
-Z70 w1604397116
+Z65 w1604397116
 R1
 R2
 R3
-Z71 8D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/partA.vhd
-Z72 FD:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/partA.vhd
+Z66 8D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/partA.vhd
+Z67 FD:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/partA.vhd
 l0
 L4
 V@0DzU^0CH4iz:agTbMWe:1
 !s100 LLmAWLa399ONnBRU6XkGa2
 R6
 32
-Z73 !s110 1610921902
+Z68 !s110 1610921902
 !i10b 1
-Z74 !s108 1610921902.000000
-Z75 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/partA.vhd|
-Z76 !s107 D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/partA.vhd|
+Z69 !s108 1610921902.000000
+Z70 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/partA.vhd|
+Z71 !s107 D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/partA.vhd|
 !i113 1
 R11
 R12
@@ -431,32 +431,32 @@ VB7`mZhYH7aK:31^LTS:?50
 !s100 hlcG9lbXLOPizj632`ez71
 R6
 32
-R73
+R68
 !i10b 1
-R74
-R75
-R76
+R69
+R70
+R71
 !i113 1
 R11
 R12
 Epartb
-Z77 w1604306042
+Z72 w1604306042
 R1
 R2
 R3
-Z78 8D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/partB.vhd
-Z79 FD:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/partB.vhd
+Z73 8D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/partB.vhd
+Z74 FD:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/partB.vhd
 l0
 L4
 VnNaj1i_n]9aQVhcLTQhi=3
 !s100 JQPGZcJ8GP<4h<QP2Jh?E2
 R6
 32
-R73
+R68
 !i10b 1
-R74
-Z80 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/partB.vhd|
-Z81 !s107 D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/partB.vhd|
+R69
+Z75 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/partB.vhd|
+Z76 !s107 D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/partB.vhd|
 !i113 1
 R11
 R12
@@ -470,32 +470,32 @@ VbEeIC=eOah]ob8ZVGD4H42
 !s100 32S=0W^iTY>eZZ>E1hRfI3
 R6
 32
-R73
+R68
 !i10b 1
-R74
-R80
-R81
+R69
+R75
+R76
 !i113 1
 R11
 R12
 Epartc
-Z82 w1604260513
+Z77 w1604260513
 R1
 R2
 R3
-Z83 8D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/partC.vhd
-Z84 FD:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/partC.vhd
+Z78 8D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/partC.vhd
+Z79 FD:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/partC.vhd
 l0
 L4
 VifVGV0bi<NQ1iUH:@aZMa0
 !s100 bfL?4Ug8Qd>0YC[L;Ck__2
 R6
 32
-R73
+R68
 !i10b 1
-R74
-Z85 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/partC.vhd|
-Z86 !s107 D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/partC.vhd|
+R69
+Z80 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/partC.vhd|
+Z81 !s107 D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/partC.vhd|
 !i113 1
 R11
 R12
@@ -509,32 +509,32 @@ V8j7aJ8Zbk5lQ12Ql0[J8i3
 !s100 Za]e`3l9_4`d]fX[di1NW3
 R6
 32
-R73
+R68
 !i10b 1
-R74
-R85
-R86
+R69
+R80
+R81
 !i113 1
 R11
 R12
 Epartd
-Z87 w1604260679
+Z82 w1604260679
 R1
 R2
 R3
-Z88 8D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/partD.vhd
-Z89 FD:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/partD.vhd
+Z83 8D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/partD.vhd
+Z84 FD:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/partD.vhd
 l0
 L4
 VUf^nIZCK^:kmPOheGhN?A0
 !s100 EU1Iff6l>_z:aj;DfhUMo2
 R6
 32
-Z90 !s110 1610921901
+Z85 !s110 1610921901
 !i10b 1
-Z91 !s108 1610921901.000000
-Z92 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/partD.vhd|
-Z93 !s107 D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/partD.vhd|
+Z86 !s108 1610921901.000000
+Z87 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/partD.vhd|
+Z88 !s107 D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/partD.vhd|
 !i113 1
 R11
 R12
@@ -548,38 +548,38 @@ VZ6]ER;SH?[QLGUH;_g:?o2
 !s100 3YA2cAlFDO`eWS2E;6@280
 R6
 32
-R90
+R85
 !i10b 1
-R91
-R92
-R93
+R86
+R87
+R88
 !i113 1
 R11
 R12
 Epla
-R47
 R42
+R37
 R1
 R2
 R3
-Z94 8D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/PLA.vhd
-Z95 FD:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/PLA.vhd
+Z89 8D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/PLA.vhd
+Z90 FD:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/PLA.vhd
 l0
 L6
 V3gYSDALVUZ]WMkY5I9R@Z2
 !s100 O]XGZf75f6>705W95B?[h3
 R6
 32
-R7
+R17
 !i10b 1
-R8
-Z96 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/PLA.vhd|
-Z97 !s107 D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/PLA.vhd|
+R18
+Z91 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/PLA.vhd|
+Z92 !s107 D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/PLA.vhd|
 !i113 1
 R11
 R12
 Apla_arc
-R42
+R37
 R1
 R2
 DEx4 work 3 pla 0 22 3gYSDALVUZ]WMkY5I9R@Z2
@@ -589,63 +589,63 @@ VkS`Ld:GUJ7Dmm`5TMU3>80
 !s100 =X_n:LeNZYK?7LJdimOHY3
 R6
 32
-R7
+R17
 !i10b 1
-R8
-R96
-R97
+R18
+R91
+R92
 !i113 1
 R11
 R12
 Eram
-R30
-R42
+R27
+R37
 R1
 R2
 R3
-Z98 8D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/ram.vhd
-Z99 FD:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/ram.vhd
+Z93 8D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/ram.vhd
+Z94 FD:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/ram.vhd
 l0
 L5
 V1:59jnFXW9LKZM`zA`SEN1
 !s100 b]mQ[8bdN;PZIJVozm6O53
 R6
 32
-R7
+R17
 !i10b 1
-R8
-Z100 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/ram.vhd|
-Z101 !s107 D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/ram.vhd|
+R18
+Z95 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/ram.vhd|
+Z96 !s107 D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/ram.vhd|
 !i113 1
 R11
 R12
 Asyncrama
-R42
+R37
 R1
 R2
 DEx4 work 3 ram 0 22 1:59jnFXW9LKZM`zA`SEN1
-l22
-L15
-VmJf9TNz5EfB`McmYoOceo3
-!s100 Xg6WDK]X4[IH1e@8a`PMS1
+l23
+L16
+VnkANOc@8Pm<cS5ifMg>R>2
+!s100 9_2NiH9AoUF_LN?^Y1I1E1
 R6
 32
-R7
+R17
 !i10b 1
-R8
-R100
-R101
+R18
+R95
+R96
 !i113 1
 R11
 R12
 Erom
-R30
-R42
+R27
+R37
 R1
 R2
 R3
-Z102 8D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/ROM.vhd
-Z103 FD:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/ROM.vhd
+Z97 8D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/ROM.vhd
+Z98 FD:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/ROM.vhd
 l0
 L5
 VOG]]oQWQ_ajkzA@_9`8BX3
@@ -655,27 +655,27 @@ R6
 R7
 !i10b 1
 R8
-Z104 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/ROM.vhd|
-Z105 !s107 D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/ROM.vhd|
+Z99 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/ROM.vhd|
+Z100 !s107 D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/ROM.vhd|
 !i113 1
 R11
 R12
 Arom_arc
-R42
+R37
 R1
 R2
 DEx4 work 3 rom 0 22 OG]]oQWQ_ajkzA@_9`8BX3
-l54
+l80
 L12
-VKkVQ0HZ;<MPIQc^X0dT=70
-!s100 Al4ofC4lVW_nfYM_Q==0R1
+Vc?^WTJXKOgT_hlEl4]:mT1
+!s100 11LjfA1d3[ZSZdV6ZzNWE1
 R6
 32
 R7
 !i10b 1
 R8
-R104
-R105
+R99
+R100
 !i113 1
 R11
 R12
@@ -684,8 +684,8 @@ R0
 R1
 R2
 R3
-Z106 8D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/tristate.vhd
-Z107 FD:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/tristate.vhd
+Z101 8D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/tristate.vhd
+Z102 FD:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/tristate.vhd
 l0
 L4
 VTzP2dmOR]8F4MHO0A]zL`0
@@ -695,8 +695,8 @@ R6
 R7
 !i10b 1
 R8
-Z108 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/tristate.vhd|
-Z109 !s107 D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/tristate.vhd|
+Z103 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/tristate.vhd|
+Z104 !s107 D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/tristate.vhd|
 !i113 1
 R11
 R12
@@ -713,8 +713,8 @@ R6
 R7
 !i10b 1
 R8
-R108
-R109
+R103
+R104
 !i113 1
 R11
 R12

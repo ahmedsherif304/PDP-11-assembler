@@ -13,21 +13,19 @@ end entity BITORing;
 architecture OR_Arc of BITORing is
 
 begin
-
-	
 		process(NEXT_ADDRESS,OR_BIT,IR) is
 		  Begin
-			if OR_BIT = "001" then  -- OR DESTINATION
-				uAR <= NEXT_ADDRESS;
+			if OR_BIT = "001" then 
+				uAR <= NEXT_ADDRESS; 
 				uAR(5 downto 4) <= IR(5 downto 4);
 				uAR(3) <= IR(3) and (not IR(4)) and (not IR(5));
-			elsif OR_BIT = "010" then	--- OR indirect source
+			elsif OR_BIT = "010" then
 				uAR <= NEXT_ADDRESS;
-				uAR(0) <= not IR(9);	
-			elsif OR_BIT = "011" then	-- OR indirect source
+				uAR(0) <= not IR(9);
+			elsif OR_BIT = "011" then
 				uAR <= NEXT_ADDRESS;
 				uAR(0) <= not IR(3);
-			elsif OR_BIT = "100" then	-- OR result
+			elsif OR_BIT = "100" then
 				uAR <= NEXT_ADDRESS;
 				uAR(0) <= (not IR(3)) and (not IR(4)) and (not IR(5));
 			elsif OR_BIT = "111" and IR(15 downto 12) = "0000"then
