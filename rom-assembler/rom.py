@@ -41,7 +41,13 @@ F5 = {
     "and": "1000",
     "or": "1001",
     "xor": "1010",
-    "cmp": "1011"
+    "cmp": "1011",
+    "not": "0001",
+    "lsr": "0010",
+    "ror": "0011",
+    "asr": "1100",
+    "lsl": "1101",
+    "rol": "1110"
 }
 
 
@@ -73,7 +79,6 @@ F10 = {
     "or_dst": "001",
     "or_indsrc": "010",
     "or_inddst": "011",
-
     "or_result": "100",
 
 }
@@ -108,6 +113,8 @@ file_out = open('rom.bin', 'w')
 lines = file1.readlines()
 for line in lines:
     line = line.replace('\n', '')
+    # if(line.find('#') >= 0):
+    #     line = line.split("#")[0]
     # line = "0:1 rsrc_out,rdst_in"
     print("line is ", line)
 
@@ -133,7 +140,7 @@ for line in lines:
     print(get_binary('11'))
     # print(bin(int(adds[1])))
 
-    out_line = adds[0] + " <= "
+    out_line = adds[0] + " => "
     for char in adds[1]:
         print("char", char)
         out_line += get_binary(char, 3)
