@@ -23,9 +23,9 @@ GENERIC (n : integer := 16);
              cout : OUT std_logic);
 end component my_nadder;
 
-SIGNAL  F_sig,B_inv,shift_out : std_logic_vector (15 DOWNTO 0);
-SIGNAL  op_2,ADD1,ADC1,SUB1,SBC1,AND1, XOR1, OR1, NOT1 : std_logic_vector (15 DOWNTO 0);
-SIGNAL c1,c2,c3,c4,cin_inv,shift_c : std_logic;
+SIGNAL  F_sig,B_inv : std_logic_vector (15 DOWNTO 0);
+SIGNAL  op_2,ADD1,ADC1,SUB1,SBC1,AND1, XOR1, OR1, CMP1 : std_logic_vector (15 DOWNTO 0);
+SIGNAL c1,c2,c3,c4,cin_inv : std_logic;
 signal N_BUS : std_logic_vector (2 downto 0);
 
 Begin
@@ -44,7 +44,7 @@ u3: my_nadder GENERIC MAP (n => m) PORT MAP (A, B_inv,cin_inv,SBC1,c4); -- A-B-C
 AND1 <= a and b;
 XOR1 <= a xor b;
 OR1  <= a or b;
-NOT1 <= not a;
+
 With sel select
 F_sig <= ADD1 when "0100", -- ADD
 ADC1 when "0101", -- ADC
@@ -54,7 +54,6 @@ AND1 when "1000", -- AND
 OR1 when "1001", -- OR
 XOR1 when "1010", -- XOR
 SUB1 when "1011", -- CMP
-NOT1 when "0001", -- NOT
 (others => '0') when others;
 
 With F_sig select
@@ -76,17 +75,5 @@ c2 when "0101", -- ADC
 c3 when "0110", -- SUB
 c4 when "0111", -- SBC
 '0'when others;
-
--- shifts
-shift_out(m-2 DOWNTO 0) <= (a(m-1 DOWNTO 1));
-  
-With S select
-shift_out(m-1) <= ('0') when "00",
-	(a(0)) when "01",
-	(cin) when "10",
-	(a(m-1)) when "11",
-     '0' when others;
-
-shift_c <= a(0);
 
 END arch_ALSU;
