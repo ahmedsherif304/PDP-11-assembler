@@ -26,7 +26,7 @@ port(
 		Carryin : out std_logic;
 		-- F9 signal --
 		WMFC : out std_logic;
-		R0in,R0out,R1in,R1out,R2in,R2out,R3in,R3out,R4in,R4out,R5in,R5out,R6in,R6out,R7in,R7out : out std_logic); 
+		R0in,R0out,R1in,R1out,R2in,R2out,R3in,R3out,R4in,R4out,R5in,R5out,R6in,R6out : out std_logic); 
 end CU;
 
 Architecture CU_Arc of CU is
@@ -106,7 +106,6 @@ begin
 	R4in <= SRCin_reg(4) or DSTin_reg(4);
 	R5in <= SRCin_reg(5) or DSTin_reg(5);
 	R6in <= SRCin_reg(6) or DSTin_reg(6);
-	R7in <= SRCin_reg(7) or DSTin_reg(7);
 	
 	-- Registers out --
 	R0out <= SRCout_reg(0) or DSTout_reg(0);
@@ -116,7 +115,6 @@ begin
 	R4out <= SRCout_reg(4) or DSTout_reg(4);
 	R5out <= SRCout_reg(5) or DSTout_reg(5);
 	R6out <= SRCout_reg(6) or DSTout_reg(6);
-	R7out <= SRCout_reg(7) or DSTout_reg(7);
 	
 	-- F0 signals --
 	NEXT_ADDRESS <= CW(31 downto 23);
