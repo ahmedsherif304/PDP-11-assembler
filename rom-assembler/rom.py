@@ -140,7 +140,7 @@ for line in lines:
     print(get_binary('11'))
     # print(bin(int(adds[1])))
 
-    out_line = adds[0] + " => "
+    out_line = adds[0] + " => \""
     for char in adds[1]:
         print("char", char)
         out_line += get_binary(char, 3)
@@ -157,5 +157,5 @@ for line in lines:
             print("F", i+1, "no",  F['no'])
             out_line += F['no']
         out_line
-    file_out.writelines([out_line+',\n'])
+    file_out.writelines([out_line+'\",\n'])
     print(out_line)
