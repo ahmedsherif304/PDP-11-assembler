@@ -23,9 +23,9 @@ GENERIC (n : integer := 16);
              cout : OUT std_logic);
 end component my_nadder;
 
-SIGNAL  F_sig,B_inv,shift_out : std_logic_vector (15 DOWNTO 0);
-SIGNAL  op_2,ADD1,ADC1,SUB1,SBC1,AND1, XOR1, OR1, NOT1 : std_logic_vector (15 DOWNTO 0);
-SIGNAL c1,c2,c3,c4,cin_inv,shift_c : std_logic;
+SIGNAL  F_sig,B_inv,shift_out,rotate_out : std_logic_vector (15 DOWNTO 0);
+SIGNAL  op_2,ADD1,ADC1,SUB1,SBC1,AND1, XOR1, OR1, NOT1, ROL1, LSL1, ASR1,ROR1,LSR1 : std_logic_vector (15 DOWNTO 0);
+SIGNAL c1,c2,c3,c4,cin_inv,shift_c, rotate_c : std_logic;
 signal N_BUS : std_logic_vector (2 downto 0);
 
 Begin
@@ -55,6 +55,11 @@ OR1 when "1001", -- OR
 XOR1 when "1010", -- XOR
 SUB1 when "1011", -- CMP
 NOT1 when "0001", -- NOT
+NOT1 when "0010", -- LSR
+NOT1 when "0011", -- ROR
+NOT1 when "1100", -- ASR
+NOT1 when "1101", -- LSL
+NOT1 when "1110", -- ROL
 (others => '0') when others;
 
 With F_sig select
@@ -75,18 +80,37 @@ cout <= c1 when "0100", -- ADD
 c2 when "0101", -- ADC
 c3 when "0110", -- SUB
 c4 when "0111", -- SBC
+'0' when "1000", -- AND
+'0' when "1001", -- OR
+'0' when "1010", -- XOR
+c3 when "1011", -- CMP
+'0' when "0001", -- NOT
+shift_c when "0010", -- LSR
+shift_c when "0011", -- ROR
+shift_c when "1100", -- ASR
+rotate_c when "1101", -- LSL
+rotate_c when "1110", -- ROL
 '0'when others;
 
 -- shifts
-shift_out(m-2 DOWNTO 0) <= (a(m-1 DOWNTO 1));
-  
-With S select
-shift_out(m-1) <= ('0') when "00",
-	(a(0)) when "01",
-	(cin) when "10",
-	(a(m-1)) when "11",
-     '0' when others;
+LSR1(m-2 DOWNTO 0) <= (a(m-1 DOWNTO 1));
+LSR1(m-1) <= '0';
 
+ROR1(m-2 DOWNTO 0) <= (a(m-1 DOWNTO 1));
+ROR1(m-1) <= a(0);
+
+ASR1(m-2 DOWNTO 0) <= (a(m-1 DOWNTO 1));
+ASR1(m-1) <= a(m-1);
 shift_c <= a(0);
+
+LSL1(m-1 DOWNTO 1) <= (a(m-2 DOWNTO 0));
+LSL1(0) <= '0';
+
+
+ROL1(m-1 DOWNTO 1) <= (a(m-2 DOWNTO 0));
+ROL1(0) <= a(m-1);
+rotate_c <= a(m-1);
+
+
 
 END arch_ALSU;

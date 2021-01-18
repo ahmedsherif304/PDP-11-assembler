@@ -9,7 +9,7 @@ z2
 cModel Technology
 dD:/3rd-year-1st-semster/computer architecture/labs/lab1/design - generic
 Ealsu
-Z0 w1610921887
+Z0 w1610989058
 Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z2 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 Z3 dD:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/cpu
@@ -21,9 +21,9 @@ V6N`oz>9lWVk10WIQffbOW2
 !s100 hd@[RWLh]4NMWkZFUa13l3
 Z6 OP;C;10.4a;61
 32
-Z7 !s110 1610921921
+Z7 !s110 1610989059
 !i10b 1
-Z8 !s108 1610921921.000000
+Z8 !s108 1610989059.000000
 Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/cpu/alsu.vhd|
 Z10 !s107 D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/cpu/alsu.vhd|
 !i113 1
@@ -35,8 +35,8 @@ R2
 Z13 DEx4 work 4 alsu 0 22 6N`oz>9lWVk10WIQffbOW2
 l31
 L17
-Z14 V>3>hg8DznNjaeMm^>MUa]1
-Z15 !s100 4YaVaE?]kaVkI<K;3MH4d1
+VlcmMR<I_QfVCR@]_k1O4H2
+!s100 1MQ<43f8?;<_=h;D<_@>n2
 R6
 32
 R7
@@ -48,21 +48,21 @@ R10
 R11
 R12
 Ealu
-Z16 w1604254142
+Z14 w1604254142
 R1
 R2
 R3
-Z17 8D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/ALU.vhd
-Z18 FD:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/ALU.vhd
+Z15 8D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/ALU.vhd
+Z16 FD:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/ALU.vhd
 l0
 L5
 VKdIYFULi]hffOzeN>DI9P3
 !s100 jj0nDQ`ffMO7=61RAd9TL3
 R6
 32
-R7
+Z17 !s110 1610921921
 !i10b 1
-R8
+Z18 !s108 1610921921.000000
 Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/ALU.vhd|
 Z20 !s107 D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/ALU.vhd|
 !i113 1
@@ -78,9 +78,9 @@ V53nH]m5kI37C8LWAhY>Ba3
 !s100 ZEK9lFg4ElO=V<20C18JP0
 R6
 32
-R7
+R17
 !i10b 1
-R8
+R18
 R19
 R20
 !i113 1
@@ -99,9 +99,9 @@ VDb?WJKS>C9M8DmOWf>bL30
 !s100 V[TcSO_6=i7G`Z4N4obU^0
 R6
 32
-R7
+R17
 !i10b 1
-R8
+R18
 Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/one_adder.vhd|
 Z25 !s107 D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/one_adder.vhd|
 !i113 1
@@ -117,9 +117,9 @@ VF1I4A_9N`67AA31RL[z732
 !s100 fDkif0Qj2F?nXhRB1Dk7]1
 R6
 32
-R7
+R17
 !i10b 1
-R8
+R18
 R24
 R25
 !i113 1
@@ -138,9 +138,9 @@ V1;N]jS=hGAA[ImX]f_BB<3
 !s100 2hh?dE?an@`kKjC3^EaB_2
 R6
 32
-R7
+R17
 !i10b 1
-R8
+R18
 Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/fulladder.vhd|
 Z30 !s107 D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/fulladder.vhd|
 !i113 1
@@ -156,9 +156,9 @@ VEOFzWIV87VRnPi8^zF5CU3
 !s100 L9FI>1[Sn7]0<YCM2[0hI3
 R6
 32
-R7
+R17
 !i10b 1
-R8
+R18
 R29
 R30
 !i113 1

@@ -66,3 +66,10 @@ force -freeze sim:/alsu/B 16'h0005 0
 force -freeze sim:/alsu/cin 1 0
 force -freeze sim:/alsu/sel 4'hA 0
 run
+
+# test xor zero flag result = 00000
+force -freeze sim:/alsu/A 16'h0F00 0
+force -freeze sim:/alsu/B 16'h0005 0
+force -freeze sim:/alsu/cin 1 0
+force -freeze sim:/alsu/sel 4'h1 0
+run
