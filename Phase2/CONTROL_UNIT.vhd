@@ -67,7 +67,7 @@ Architecture CU_Arc of CU is
 	---------------------------------------------------------
 	
 signal 	CW : std_logic_vector (31 downto 0);	-- Control Word
-signal 	uAR,uAR_in,NEXT_ADDRESS : std_logic_vector (8 downto 0);
+signal 	uAR, uAR_in,	NEXT_ADDRESS : std_logic_vector (8 downto 0);
 signal Rsrcout,Rdstout,Rsrcin,Rdstin : std_logic;
 signal OR_BIT : std_logic_vector(2 downto 0);
 signal PLA_ENABLE : std_logic;
