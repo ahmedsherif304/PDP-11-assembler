@@ -32,7 +32,7 @@ Architecture CPU_Arc of CPU is
 		Carryin : out std_logic;
 		-- F9 signal --
 		WMFC : out std_logic;
-		R0in,R0out,R1in,R1out,R2in,R2out,R3in,R3out,R4in,R4out,R5in,R5out,R6in,R6out : out std_logic);    
+		R0in,R0out,R1in,R1out,R2in,R2out,R3in,R3out,R4in,R4out,R5in,R5out,R6in,R6out,R7in,R7out : out std_logic);    
 	end Component;
 	--------------------------------------------
 	Component ALSU  is  
@@ -195,6 +195,6 @@ ALSU_Flags(1) <= Zero;
 ALSU_Flags(2) <= Negative;	
 	
 	-- CU component -- to do check index of flags
-CU_comp: CU port map(internal_CLK,RST,IR,FLAGS(1),Flags(2),Flags(3),PCout,MDRout,Zout,SrcOut,DstOut,PCin,IRin,Zin,MARin,MDRin,Yin,SRCin,DSTin,ALU,RE_AD,Wr_ite,ClearY,Carryin,WMFC,R0in,R0out,R1in,R1out,R2in,R2out,R3in,R3out,R4in,R4out,R5in,R5out,R6in,R6out);
+CU_comp: CU port map(internal_CLK,RST,IR,FLAGS(1),Flags(2),Flags(3),PCout,MDRout,Zout,SrcOut,DstOut,PCin,IRin,Zin,MARin,MDRin,Yin,SRCin,DSTin,ALU,RE_AD,Wr_ite,ClearY,Carryin,WMFC,R0in,R0out,R1in,R1out,R2in,R2out,R3in,R3out,R4in,R4out,R5in,R5out,R6in,R6out,PCin,PCout);
 
 end CPU_Arc;

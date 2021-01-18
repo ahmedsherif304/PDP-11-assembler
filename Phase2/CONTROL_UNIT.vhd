@@ -77,7 +77,7 @@ signal F3,F4,F6 : std_logic_vector(3 downto 0);
 begin
 
 	-- uAR register --
-	uAR_r: nreg generic map(16) port map(CLK,RST,'1',uAR_in,uAR);	-- uAR
+	uAR_r: nreg generic map(9) port map(CLK,RST,'1',uAR_in,uAR);	-- uAR
 	-- Decoding Cercuit component --
 	dec_cercuit_comp:DECODING_CIRCUIT port map(OR_BIT,PLA_ENABLE,NEXT_ADDRESS,IR,Z_flag,N_flag,C_flag,uAR_in);
 	-- ROM component --

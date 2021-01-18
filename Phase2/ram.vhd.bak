@@ -19,7 +19,6 @@ signal ram : ram_type := (
 1   =>  "0000000011000001",	-- Mov @(R2),R1
 others => "1100000000000001"
 );
-	SIGNAL ram : ram_type ;
 	BEGIN
 		PROCESS(clk) IS
 			BEGIN
