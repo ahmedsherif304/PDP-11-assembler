@@ -32,7 +32,7 @@ ONEOPERAND(4)<=IR(4);
 ONEOPERAND(3)<=IR(3) and (not IR(4)) and (not IR(5));
 
 
-uAR<="010000001" or ONEOPERAND when IR(15 downto 12)="0000" and Enable = '1'	--one operand instructions
+uAR<="010000001" or ONEOPERAND when IR(15 downto 12)="0001" and Enable = '1'	--one operand instructions
 else "000000011" when IR(15 downto 9)="0010000" and Enable = '1' 		--HLT (Halt)
 else "000000100" when IR(15 downto 9)="0010001" and Enable = '1'		--NOP (No operation)
 else "000000101" when IR(15 downto 8)="00010101" and Enable = '1' 	--BNE

@@ -1,30 +1,4 @@
-{D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/ROM.vhd} {1 {vcom -work work -2002 -explicit -stats=none {D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/ROM.vhd}
-Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity ROM
--- Compiling architecture ROM_Arc of ROM
-
-} {} {}} {D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/BITORING.vhd} {1 {vcom -work work -2002 -explicit -stats=none {D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/BITORING.vhd}
-Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity BITORing
--- Compiling architecture OR_Arc of BITORing
-
-} {} {}} {D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/ram.vhd} {1 {vcom -work work -2002 -explicit -stats=none {D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/ram.vhd}
-Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity ram
--- Compiling architecture syncrama of ram
-
-} {} {}} {D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/one_adder.vhd} {1 {vcom -work work -2002 -explicit -stats=none {D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/one_adder.vhd}
+{D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/one_adder.vhd} {1 {vcom -work work -2002 -explicit -stats=none {D:/3rd-year-1st-semster/computer architecture/labs/lab1/design2/one_adder.vhd}
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -56,15 +30,6 @@ Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 
 -- Compiling entity my_nadder
 -- Compiling architecture a_my_nadder of my_nadder
 
-} {} {}} {D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/PLA.vhd} {1 {vcom -work work -2002 -explicit -stats=none {D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/PLA.vhd}
-Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity PLA
--- Compiling architecture PLA_Arc of PLA
-
 } {} {}} {D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/alsu.vhd} {1 {vcom -work work -2002 -explicit -stats=none {D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/alsu.vhd}
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
 -- Loading package STANDARD
@@ -72,14 +37,6 @@ Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 
 -- Loading package std_logic_1164
 -- Compiling entity ALSU
 -- Compiling architecture arch_ALSU of ALSU
-
-} {} {}} {D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/CONTROL_UNIT.vhd} {1 {vcom -work work -2002 -explicit -stats=none {D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/CONTROL_UNIT.vhd}
-Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity CU
--- Compiling architecture CU_Arc of CU
 
 } {} {}} {D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/tristate.vhd} {1 {vcom -work work -2002 -explicit -stats=none {D:/3rd-year-1st-semster/computer architecture/project/assembler/PDP-11-assembler/Phase2/tristate.vhd}
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015

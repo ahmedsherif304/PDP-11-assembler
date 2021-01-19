@@ -38,6 +38,7 @@ component BITORING is
 begin
 PLA0:PLA port map(Enable,IR,Z_flag,N_flag,C_flag,PLA_OUT);
 BITORING0: BITORING port map(IR,NEXT_ADDRESS,OR_BIT,OR_OUT);
-NEW_uAR<= PLA_OUT or OR_OUT;
+NEW_uAR<= NEXT_ADDRESS when PLA_OUT = "000000000" and OR_OUT = "000000000"
+else PLA_OUT or OR_OUT ;
 
 end DECODING_CIRCUIT_Arc;

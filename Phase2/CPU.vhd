@@ -32,7 +32,7 @@ Architecture CPU_Arc of CPU is
 		Carryin : out std_logic;
 		-- F9 signal --
 		WMFC : out std_logic;
-		R0in,R0out,R1in,R1out,R2in,R2out,R3in,R3out,R4in,R4out,R5in,R5out,R6in,R6out : out std_logic);    
+		R0in,R0out,R1in,R1out,R2in,R2out,R3in,R3out,R4in,R4out,R5in,R5out,R6in,R6out,R7in,R7out : out std_logic);    
 	end Component;
 	--------------------------------------------
 	Component ALSU  is  
@@ -81,11 +81,11 @@ signal R0,R1,R2,R3,R4,R5,R6,PC : std_logic_vector(15 downto 0);
 signal MAR,MDR,mem_data,IR,IR_Address,ALU_out : std_logic_vector(15 downto 0);		-- ram 
 signal Z,Y,SRC,DST,ALSU_Flags,FLAGS : std_logic_vector(15 downto 0);
 signal internal_CLK : std_logic;		-- CLK of the ram
-signal MDR_E : std_logic;	
+signal MDR_E,E_R7in,E_R7out : std_logic;	
 signal MDR_input:std_logic_vector(15 downto 0);	
-signal Cout,Zero,Negative,Y_RST,addressOut : std_logic;
+signal Cout,Zero,Negative,Y_RST,addressOut,InvCLK : std_logic;
 -- 4 general purpose registers signals --
-signal R0in,R0out,R1in,R1out,R2in,R2out,R3in,R3out,R4in,R4out,R5in,R5out,R6in,R6out: std_logic; 
+signal R0in,R0out,R1in,R1out,R2in,R2out,R3in,R3out,R4in,R4out,R5in,R5out,R6in,R6out,R7in,R7out: std_logic; 
 	-- control signals --
 	
 	-- F1 signals --
@@ -127,7 +127,9 @@ R3_r: nreg generic map(16) port map(internal_CLK,RST,R3in,data_bus,R3);
 R4_r: nreg generic map(16) port map(internal_CLK,RST,R4in,data_bus,R4);
 R5_r: nreg generic map(16) port map(internal_CLK,RST,R5in,data_bus,R5);
 R6_r: nreg generic map(16) port map(internal_CLK,RST,R6in,data_bus,R6);	
-R7_r: nreg generic map(16) port map(internal_CLK,RST,PCin,data_bus,PC);	
+E_R7in <= PCin or R7in;
+InvCLK <= not internal_CLK;
+R7_r: nreg generic map(16) port map(internal_CLK,RST,E_R7in,data_bus,PC);	
 	
 	-- 3 special purpose registers --
 SRC_r:nreg generic map(16) port map(internal_CLK,RST,SRCin,data_bus,SRC);	
@@ -135,9 +137,9 @@ DST_r:nreg generic map(16) port map(internal_CLK,RST,DSTin,data_bus,DST);
 
 	-- 2 ram Registers --
 MDR_E <= MDRin; --or (not WMFC);
-MDR_input <= mem_data when WMFC='0'
-	else data_bus;	
-MDR_r:nreg generic map(16) port map(internal_CLK,RST,MDR_E,MDR_input,MDR);	
+MDR_input <= data_bus when Wr_ite='1'
+	else mem_data;	
+MDR_r:nreg generic map(16) port map(internal_CLK,RST,WMFC,MDR_input,MDR);	
 MAR_r:nreg generic map(16) port map(internal_CLK,RST,MARin,data_bus,MAR);	
 
 	-- 3 ALSU Registers --
@@ -161,8 +163,9 @@ R2_t: tristate generic map(16) port map(R2out,R2,data_bus);
 R3_t: tristate generic map(16) port map(R3out,R3,data_bus);	
 R4_t: tristate generic map(16) port map(R4out,R4,data_bus);	
 R5_t: tristate generic map(16) port map(R5out,R5,data_bus);	
-R6_t: tristate generic map(16) port map(R6out,R6,data_bus);	
-R7_t: tristate generic map(16) port map(PCout,PC,data_bus);	
+R6_t: tristate generic map(16) port map(R6out,R6,data_bus);
+E_R7out <= R7out or PCout;	
+R7_t: tristate generic map(16) port map(E_R7out,PC,data_bus);	
 
 	-- 3 special purpose registers tri_state_buffers --
 SRC_t:tristate generic map(16) port map(SRCout,SRC,data_bus);	-- SRC
@@ -173,6 +176,7 @@ MDR_t:tristate generic map(16) port map(MDRout,MDR,data_bus);	-- MDR
 
 	-- Z register tri_state_buffer --
 Z_t:tristate generic map(16) port map(Zout,Z,data_bus);	-- Z
+	
 
 
 	-- Addressout tri state buffer --
@@ -194,6 +198,7 @@ ALSU_Flags(1) <= Zero;
 ALSU_Flags(2) <= Negative;	
 	
 	-- CU component -- to do check index of flags
+<<<<<<< HEAD
 CU_comp: CU port map(internal_CLK,RST,IR,Zero,Negative,Cout,
 PCout,MDRout,Zout,SrcOut,DstOut,PCin,IRin,Zin,MARin,
 MDRin,Yin,SRCin,DSTin,
@@ -201,5 +206,8 @@ ALU,
 RE_AD,Wr_ite,
 ClearY,Carryin,
 WMFC,R0in,R0out,R1in,R1out,R2in,R2out,R3in,R3out,R4in,R4out,R5in,R5out,R6in,R6out);
+=======
+CU_comp: CU port map(internal_CLK,RST,IR,Cout,Negative,Zero,PCout,MDRout,Zout,SrcOut,DstOut,PCin,IRin,Zin,MARin,MDRin,Yin,SRCin,DSTin,ALU,RE_AD,Wr_ite,ClearY,Carryin,WMFC,R0in,R0out,R1in,R1out,R2in,R2out,R3in,R3out,R4in,R4out,R5in,R5out,R6in,R6out,R7in,R7out);
+>>>>>>> 0823ba4a3f035a52a510e8272fb34c3248ebd7fa
 
 end CPU_Arc;
