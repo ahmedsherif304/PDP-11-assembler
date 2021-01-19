@@ -16,7 +16,10 @@ END ENTITY ram;
 ARCHITECTURE syncrama OF ram IS
 	TYPE ram_type IS ARRAY(0 TO 2047) OF std_logic_vector(n-1 DOWNTO 0);
 signal ram : ram_type := (
-0   =>  "0011000011000110",	-- Mov (R3),R6
+0 => "0011010111000110",
+1 => "0000000001100100",
+2 => "0011010111000010",
+3 => "0000000000001010",
 --1   =>  "0000000001100100",	-- Mov @(R2),R1
 others => "0000000000000000"
 );

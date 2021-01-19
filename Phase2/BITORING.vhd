@@ -38,7 +38,7 @@ begin
 				uAR(2 downto 0) <= IR(14 downto 12);
 				uAR(3) <= IR(15);
 			elsif OR_BIT = "000" then	-- do nothing
-				uAR <= NEXT_ADDRESS;
+				uAR <= "000000000";
 			end if;
 		end process;
 end OR_Arc;
