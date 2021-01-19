@@ -194,6 +194,12 @@ ALSU_Flags(1) <= Zero;
 ALSU_Flags(2) <= Negative;	
 	
 	-- CU component -- to do check index of flags
-CU_comp: CU port map(internal_CLK,RST,IR,Cout,Negative,Zero,PCout,MDRout,Zout,SrcOut,DstOut,PCin,IRin,Zin,MARin,MDRin,Yin,SRCin,DSTin,ALU,RE_AD,Wr_ite,ClearY,Carryin,WMFC,R0in,R0out,R1in,R1out,R2in,R2out,R3in,R3out,R4in,R4out,R5in,R5out,R6in,R6out);
+CU_comp: CU port map(internal_CLK,RST,IR,Zero,Negative,Cout,
+PCout,MDRout,Zout,SrcOut,DstOut,PCin,IRin,Zin,MARin,
+MDRin,Yin,SRCin,DSTin,
+ALU,
+RE_AD,Wr_ite,
+ClearY,Carryin,
+WMFC,R0in,R0out,R1in,R1out,R2in,R2out,R3in,R3out,R4in,R4out,R5in,R5out,R6in,R6out);
 
 end CPU_Arc;

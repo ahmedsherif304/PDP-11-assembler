@@ -1,0 +1,89 @@
+004:000 HLT
+020:274 FLAGS_E,SRCout,ClearY,alu(0001),Zin,ORresult
+021:274 FLAGS_E,SRCout,alu(0001),Zin,ORresult
+022:274 FLAGS_E,SRCout,alu(0010),setC,Zin,ORresult
+024:035
+025:274 FLAGS_E,SRCout,alu(0101), Zin,ORresult
+026:274 FLAGS_E,SRCout,alu(0110),Zin,ORresult
+027:030 alu(0000),Zin
+030:031 Zout,TMPin
+031:032 SRCout,Yin
+032 : 000 TMPout,alu(0010),setC,FLAGS_E
+034 : 000 SRCout,alu(0100),FLAGS_E
+035 : 036 alu(0000),Zin
+036 : 037 Zout,TMPin
+037 : 040 SRCout,Yin
+040 : 041 alu(0111),Zin
+041 : 042 Zout,Yin
+042 : 274 TMPout,alu(0100),Zin,FLAGS_E,ORresult
+043 : 044 Addressout,Yin
+044 : 045 PCout,alu(0001),Zin
+045 : 000 Zout,PCin
+054 : 020 OR2op
+056 : 300 OR1op
+057 : 060 alu(0000),Zin
+060 : 061 Zout,TMPin
+061 : 062 SPout,Yin
+062 : 063 alu(0011),Zin
+063 : 064 Zout,SPin,MARin
+064 : 065 Rsrcout,MDRin,WR
+065 : 066 PCout,Rsrcin
+066 : 000 TMPout,PCin
+070 : 071 Rsrcout,PCin
+071 : 072 SPout,MARin,Yin,RD
+072 : 073 alu(0000),setC,Zin
+073 : 074 MDRout,Rsrcin
+074 : 000 Zout,SPin
+101 : 201 Rsrcout,SRCin,ORdst
+111 : 112 Rsrcout,MARin,RD
+112 : 172 
+121 : 122 Rsrcout,MARin,RD,setC,alu(0001),ClearY,Zin
+122 : 170 Zout,Rsrcin,ORindsrc
+141 : 142 Rsrcout,Yin
+142 : 143 alu(0011),Zin
+143 : 144 Zout,Rsrcin,MARin,RD
+144 : 170 ORindsrc
+161 : 162 PCout,MARin,RD,setC,alu(0001),ClearY,Zin
+162 : 163 Zout,PCin
+163 : 164 MDRout,Yin
+164 : 165 Rsrcout,alu(0001),Zin
+165 : 166 Zout,MARin,RD
+166 : 170 ORindsrc
+170 : 171 MDRout,MARin,RD
+171 : 172 
+172 : 200 MDRout,SRCin
+200 : 201 ORdst
+201 : 054 Rdstout,Yin,ORop
+211 : 212 Rdstout,MARin,RD
+212 : 272 
+221 : 222 Rdstout,MARin,RD,setC,alu(0001),ClearY,Zin
+222 : 270 Zout,Rdstin,ORinddst
+241 : 242 Rdstout,Yin
+242 : 243 alu(0011),Zin
+243 : 244 Zout,Rdstin,MARin,RD
+244 : 270 ORinddst
+261 : 262 PCout,MARin,RD,setC,alu(0001),ClearY,Zin
+262 : 263 Zout,PCin
+263 : 264 MDRout,Yin
+264 : 265 Rdstout,alu(0001),Zin
+265 : 266 Zout,MARin,RD
+266 : 270 ORinddst
+270 : 271 MDRout,MARin,RD
+271 : 272 
+272 : 054 MDRout,Yin,ORop           
+274 : 000 Zout,MDRin,WR
+275 : 000 Zout,Rdstin
+300 : 274 alu(0000),setC,Zin,FLAGS_E,ORresult
+303 : 274 alu(0011),Zin,FLAGS_E,ORresult
+307 : 274 alu(0111),Zin,FLAGS_E,ORresult
+310 : 274 alu(1000),Zin,FLAGS_E,ORresult
+311 : 274 alu(1001),Zin,FLAGS_E,ORresult
+312 : 274 alu(1010),Zin,FLAGS_E,ORresult
+313 : 274 alu(1011),Zin,FLAGS_E,ORresult
+314 : 274 alu(1100),Zin,FLAGS_E,ORresult
+315 : 274 alu(1101),Zin,FLAGS_E,ORresult
+316 : 274 alu(1110),Zin,FLAGS_E,ORresult
+317 : 274 alu(1111),Zin,FLAGS_E,ORresult
+323 : 274 alu(0011),setC,Zin,FLAGS_E,ORresult
+340 : 341 alu(0000),Zin
+341 : 000 Zout,PCin

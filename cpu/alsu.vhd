@@ -52,7 +52,7 @@ SUB1 when "0110", -- SUB
 SBC1  when "0111", -- SBC
 AND1 when "1000", -- AND
 OR1 when "1001", -- OR
-XOR1 when "1010", -- XOR
+XOR1 whe1010", -- XOR
 SUB1 when "1011", -- CMP
 NOT1 when "0001", -- NOT
 NOT1 when "0010", -- LSR
